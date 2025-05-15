@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, NgZone, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 /**
@@ -26,7 +26,7 @@ export class BannerComponent implements AfterViewInit {
   title: string;
   subtitle: string;
 
-  constructor(private router: Router, private ngZone: NgZone) { }
+  constructor(private router: Router) { }
 
   ngAfterViewInit(): void {
       this.router.events.subscribe((event) => {
@@ -61,11 +61,10 @@ export class BannerComponent implements AfterViewInit {
   
 
   triggerFadeUp(): void {
-    this.ngZone.run(() => {
-      const el = this.heroImage.nativeElement;
-      el.classList.remove('hero-image-container');
-      void el.offsetWidth;
-      el.classList.add('hero-image-container');
-    });
+    const el = this.heroImage.nativeElement as HTMLElement;
+    el.classList.remove('hero-image-container');
+    const _ = el.offsetWidth;
+    console.log(_);
+    el.classList.add('hero-image-container');
   }
 }
