@@ -1,0 +1,79 @@
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 32px;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.project-card.reverse {
+  direction: rtl;
+}
+
+.project-card.reverse .project-info {
+  direction: ltr;
+}
+
+.project-image img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: filter 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.project-image img:hover {
+  filter: brightness(1.2);
+  transform: scale(1.01); /* optional slight zoom */
+}
+
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.project-info h2 {
+  margin: 0 0 0.5rem;
+}
+
+.project-info p {
+  margin: 0;
+  color: #555;
+}
+
+/* Responsive layout: stack image and text */
+@media (max-width: 768px) {
+  .project-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .project-card.reverse {
+    direction: ltr;
+  }
+}
+
+mat-divider {
+  width: 200%;
+}
+
+.info-small {
+  font-size: small;
+  color: #aaaaaa;
+  margin-bottom: 8px;
+}
+
+.info-regular {
+  margin-bottom: 4px;
+}

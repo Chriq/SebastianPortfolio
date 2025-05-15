@@ -1,0 +1,42 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+  <div *ngIf="sent" class="success-message">Message sent successfully!</div>
+  <div *ngIf="error" class="error-message">{{ error }}</div>
+
+  <span>
+    I love collaborating and meeting new people! You can reach me through my email, or by submitting the form below.
+  </span>
+
+  <div class="form-row-half">
+    <label>First Name:</label>
+    <input type="text" formControlName="firstName" required />
+  </div>
+
+  <div class="form-row-half">
+    <label>Last Name:</label>
+    <input type="text" formControlName="lastName" required />
+  </div>
+
+  <div class="form-row">
+    <label>Email:</label>
+    <input type="email" formControlName="email" required />
+  </div>
+
+  <div class="form-row">
+    <label>Company:</label>
+    <input type="text" formControlName="company" />
+  </div>
+
+  <div class="form-row">
+    <label>Subject:</label>
+    <input type="text" formControlName="subject" required />
+  </div>
+
+  <div class="form-row">
+    <label>Message:</label>
+    <textarea formControlName="message" rows="5" required></textarea>
+  </div>
+
+  <button type="submit" [disabled]="!contactForm.valid || sending">
+    {{ sending ? 'Sending...' : 'Send Message' }}
+  </button>
+</form>

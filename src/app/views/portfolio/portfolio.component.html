@@ -1,0 +1,17 @@
+<div *ngIf="projects" class="portfolio-container">
+  <div class="project-card" *ngFor="let project of projects; let i = index; let last = last" [ngClass]="{ 'reverse': i % 2 !== 0 }">
+    <div class="project-image">
+      <img [src]="getCoverImage(project)" alt="{{ project.title }}" (click)="navigateTo(project.id);"/>
+    </div>
+    <div class="project-info" (click)="navigateTo(project.id);">
+      <h2>{{ project.title }}</h2>
+      <span class="info-small">{{ project.createdBy }} - {{ project.duration }}</span>
+      <span class="info-small">{{ project.genre }}</span>
+
+      <span class="info-regular">{{ project.description }}</span>
+      <span class="info-regular">{{ project.credits }}</span>
+      <span class="info-regular">{{ project.awards }}</span>
+    </div>
+    <mat-divider *ngIf="!last"></mat-divider>
+  </div>
+</div>

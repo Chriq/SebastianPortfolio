@@ -1,0 +1,32 @@
+<!-- project.component.html -->
+<div class="project-container">
+  <div class="project-video">
+    <iframe 
+      [src]="embedUrl | safeUrl" 
+      frameborder="0" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="project-header">
+    <div class="project-text">
+      <h1>{{ project.title }}</h1>
+      <div class="info-small">
+        <span>{{ project.createdBy }}</span>
+        <span>*</span>
+        <span>{{ project.duration }}</span>
+        <span>*</span>
+        <span>{{ project.genre }}</span>
+      </div>
+      
+      <h2>Description</h2>
+      <span class="info-regular">{{ project.description }}</span>
+
+      <h2>Awards</h2>
+      <span class="info-regular">{{ project.awards }}</span>
+
+      <h2>Credits</h2>
+      <span class="info-regular" *ngFor="let c of project.credits">{{ c }}</span>
+    </div>
+  </div>
+</div>

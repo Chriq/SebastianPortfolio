@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="title" (click)="navigateTo('home');">Sebastian Segura</div>
+
+  <nav class="nav-links">
+    <a *ngFor="let item of menuOptions" (click)='navigateTo(item)'>{{item}}</a>
+  </nav>
+
+  <div class="hamburger" (click)="toggleMenu()">
+    &#9776;
+  </div>
+
+  <div class="overlay" [class.open]="menuOpen">
+    <a (click)="closeMenu()" class="close-btn">&times;</a>
+    <div class="overlay-content">
+      <a *ngFor="let item of menuOptions" (click)="navigateTo(item); closeMenu()">{{item}}</a>
+    </div>
+  </div>
+</header>
