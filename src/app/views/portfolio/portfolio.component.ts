@@ -4,10 +4,11 @@ import { Project } from '../../interfaces/media';
 import { ProjectService } from '../../services/project.service';
 import { Router } from '@angular/router';
 import { MatDividerModule } from '@angular/material/divider';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [CommonModule, MatDividerModule],
+  imports: [CommonModule, MatDividerModule, MatTabsModule],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
