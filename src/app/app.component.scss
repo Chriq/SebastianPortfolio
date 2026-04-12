@@ -1,11 +1,17 @@
 .outlet-container {
-    max-width: 1000px;
-    margin: 2rem auto auto;
+  // max-width: 1200px;
+  margin: 0 0 0 0;
 }
 
-/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 9999;
+
 }

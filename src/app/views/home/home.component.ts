@@ -8,5 +8,5 @@ import { SafeUrlPipe } from '../../pipes/safe-url.pipe';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  reelUrl = "https://www.youtube.com/embed/UUJh0wh5xDA";
+  reelUrl = "https://www.youtube.com/embed/J4taJk9VpPE";
 }
