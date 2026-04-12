@@ -3,9 +3,9 @@ import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import emailjs from '@emailjs/browser';
 
-const SERVICE_ID: string = '';
-const TEMPLATE_ID: string = '';
-const PUBLIC_KEY: string = '';
+const SERVICE_ID: string = 'service_ws7807u';
+const TEMPLATE_ID: string = 'template_h5buav3';
+const PUBLIC_KEY: string = 'FkuBy2Ghmq9HBp0D_';
 
 @Component({
   selector: 'app-contact',

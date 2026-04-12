@@ -3,33 +3,82 @@
 
 @include mat.core();
 
-$portfolio-theme: mat.define-theme((
-  color: (
-    theme-type: dark,
-    primary: mat.$azure-palette,
-    tertiary: mat.$blue-palette,
-    use-system-variables: true
-  ),
-  density: (
-    scale: 0,
-  )
-));
+// $portfolio-theme: mat.define-theme((color: (theme-type: dark,
+//         primary: mat.$azure-palette,
+//         tertiary: mat.$blue-palette,
+//         use-system-variables: true),
+//       density: (scale: 0,
+//       )));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
+// :root {
+//   @include mat.all-component-themes($portfolio-theme);
+// }
+
 :root {
-  @include mat.all-component-themes($portfolio-theme);
+  /* Backgrounds */
+  --bg-primary: #071319;
+  /* Midnight Blue */
+  --bg-secondary: #030d17;
+  /* Deep Aubergine */
+  --bg-elevated: #070f27;
+  /* Night Fog */
+
+  /* Text */
+  --text-primary: #E8E3D8;
+  /* Warm Bone */
+  --text-secondary: #d2cbe4;
+  /* Muted Ash */
+  --text-inverse: #0E1320;
+
+
+  /* Accent */
+  --accent: #C6B27C;
+  /* Desaturated Brass */
+  --accent-muted: rgba(198, 178, 124, 0.4);
+
+  /* Borders */
+  --border-subtle: rgba(232, 227, 216, 0.08);
+  --border-strong: rgba(232, 227, 216, 0.16);
+
+  /* Typography */
+  --font-heading: 'Libre Baskerville', serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Motion */
+  --transition-fast: 120ms ease;
+  --transition-medium: 240ms ease;
+
+  @include mat.select-overrides((panel-background-color: var(--bg-primary),
+      enabled-trigger-text-color: var(--text-primary),
+    ));
 }
 
-html, body { height: 100%; }
-body { 
-  margin: 0; 
-  font-family: Roboto, "Helvetica Neue", sans-serif; 
-  color: #f0f0f0;
-  background-color: #000;
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+
+  background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
+
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  height: fit-content;
 }
 
 .mat-app-background {
   background-color: #000 !important;
+}
+
+a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--sc-transition-fast);
 }

@@ -1,11 +1,65 @@
+.home-container {
+  padding-bottom: 180px;
+  margin-top: -126px;
+}
+
 .home-video {
   position: relative;
-  width: 100%;
+  width: 50%;
   aspect-ratio: 16 / 9;
+  margin-top: 250px;
+  justify-self: center;
 }
 
 .home-video iframe {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+
+/* app.component.css */
+.video-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: 126px;
+}
+
+.bg-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+h1 {
+  font-size: xxx-large;
+}
+
+.name-container {
+  position: absolute;
+  top: 270px;
+  z-index: 1;
+  place-self: anchor-center;
+  height: 975px;
+}
+
+.name-box {
+  position: sticky;
+  top: 450px;
+  place-items: center;
+  font-size: large;
 }

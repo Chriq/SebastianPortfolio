@@ -1,3 +1,5 @@
+@use '@angular/material' as mat;
+
 .portfolio-container {
   display: flex;
   flex-direction: column;
@@ -10,6 +12,7 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 2rem;
+  margin-top: 16px;
 }
 
 .project-card.reverse {
@@ -76,4 +79,18 @@ mat-divider {
 
 .info-regular {
   margin-bottom: 4px;
+}
+
+
+
+:root {
+  @include mat.tabs-overrides((
+    active-focus-indicator-color: orange,
+    active-label-text-color: red,
+    divider-color: red
+  ));
+}
+
+.mdc-tab__text-label {
+  color: red;;
 }
