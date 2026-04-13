@@ -1,10 +1,6 @@
-<!-- project.component.html -->
-<div class="project-container">
+<div class="project-container" *ngIf="project">
   <div class="project-video">
-    <iframe 
-      [src]="embedUrl | safeUrl" 
-      frameborder="0" 
-      allowfullscreen>
+    <iframe [src]="embedUrl | safeUrl" frameborder="0" allowfullscreen>
     </iframe>
   </div>
 
@@ -18,7 +14,7 @@
         <span>*</span>
         <span>{{ project.genre }}</span>
       </div>
-      
+
       <h2>Description</h2>
       <span class="info-regular">{{ project.description }}</span>
 

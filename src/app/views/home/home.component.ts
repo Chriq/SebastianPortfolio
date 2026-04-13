@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { SafeUrlPipe } from '../../pipes/safe-url.pipe';
-import { YoutubeBackgroundComponent } from './youtube-background/youtube-background.component';
+import { YoutubeBackgroundComponent } from './youtube-player/youtube-background/youtube-background.component';
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
 
 @Component({

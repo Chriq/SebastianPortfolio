@@ -3,6 +3,7 @@
         "id": "hey-can-we-talk",
         "title": "Hey, Can We Talk?",
         "createdBy": "Light House Studio",
+        "releaseDate": "01-01-2022",
         "duration": "04:14",
         "genre": "Thriller",
         "description": "Adrenaline Film Project 2022",
@@ -29,6 +30,25 @@
         "ytVideoId": "uqmrlA-TZos",
         "roles": [
             "Director",
+            "Cinematographer",
+            "Editor"
+        ]
+    },
+    {
+        "id": "runner-and-jumper",
+        "title": "The Runner and the Jumper",
+        "genre": [
+            "Silent",
+            "Thriller",
+            "Experimental"
+        ],
+        "releaseDate": "01-01-2020",
+        "description": "Made on 16mm black and white reversal film with a Bolex camera, this is the first film I ever made. Starring the lovely Karen Zipor, it tells of a story of two people: a woman who wants to jump off the side of a parking structure, and a person who is running to find them. The film was meant to be an exercise of telling a cohesive story within a short runtime, only one minute and eleven seconds.",
+        "ytVideoId": "qGVOlwsmPJw",
+        "roles": [
+            "Writer",
+            "Director",
+            "Producer",
             "Cinematographer",
             "Editor"
         ]
