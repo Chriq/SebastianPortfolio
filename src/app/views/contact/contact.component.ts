@@ -1,6 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 import emailjs from '@emailjs/browser';
 
 const SERVICE_ID: string = 'service_ws7807u';
@@ -9,7 +12,7 @@ const PUBLIC_KEY: string = 'FkuBy2Ghmq9HBp0D_';
 
 @Component({
   selector: 'app-contact',
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, MatInputModule, MatButtonModule, MatIconModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

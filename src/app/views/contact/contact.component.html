@@ -2,41 +2,38 @@
   <div *ngIf="sent" class="success-message">Message sent successfully!</div>
   <div *ngIf="error" class="error-message">{{ error }}</div>
 
-  <span>
-    I love collaborating and meeting new people! You can reach me through my email, or by submitting the form below.
-  </span>
+  <mat-form-field class="form-row-half">
+    <mat-label>First Name</mat-label>
+    <input matInput type="text" formControlName="firstName" />
+  </mat-form-field>
 
-  <div class="form-row-half">
-    <label>First Name:</label>
-    <input type="text" formControlName="firstName" required />
-  </div>
+  <mat-form-field class="form-row-half">
+    <mat-label>Last Name</mat-label>
+    <input matInput type="text" formControlName="lastName" />
+  </mat-form-field>
 
-  <div class="form-row-half">
-    <label>Last Name:</label>
-    <input type="text" formControlName="lastName" required />
-  </div>
+  <mat-form-field class="form-row">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" formControlName="email" />
+  </mat-form-field>
 
-  <div class="form-row">
-    <label>Email:</label>
-    <input type="email" formControlName="email" required />
-  </div>
+  <mat-form-field class="form-row">
+    <mat-label>Company</mat-label>
+    <input matInput type="text" formControlName="company" />
+  </mat-form-field>
 
-  <div class="form-row">
-    <label>Company:</label>
-    <input type="text" formControlName="company" />
-  </div>
+  <mat-form-field class="form-row">
+    <mat-label>Subject</mat-label>
+    <input matInput type="text" formControlName="subject" />
+  </mat-form-field>
 
-  <div class="form-row">
-    <label>Subject:</label>
-    <input type="text" formControlName="subject" required />
-  </div>
+  <mat-form-field class="form-row">
+    <mat-label>Message</mat-label>
+    <textarea matInput formControlName="message" rows="5"></textarea>
+  </mat-form-field>
 
-  <div class="form-row">
-    <label>Message:</label>
-    <textarea formControlName="message" rows="5" required></textarea>
-  </div>
-
-  <button type="submit" [disabled]="!contactForm.valid || sending">
-    {{ sending ? 'Sending...' : 'Send Message' }}
+  <button mat-button class="form-button" type="submit" [disabled]="!contactForm.valid || sending">
+    <mat-icon>mail</mat-icon>
+    <h3>{{ sending ? 'Sending...' : 'Send Message' }}</h3>
   </button>
 </form>

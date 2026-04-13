@@ -8,7 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  email: string = "sebastiangsegura@gmail.com";
+  email: string = "mailto:sebastiangsegura@gmail.com";
   insta: string = "";
   linkedin: string = "https://www.linkedin.com/in/sebastian-segura-a46492226/";
 
@@ -18,7 +18,7 @@ export class FooterComponent {
   iconColor: string = "FFFFFF";
 
   ngOnInit() {
-    this.iconColor = this.getCssVariable('--text-secondary').replace("#", "");
+    this.iconColor = this.getCssVariable('--text-primary').replace("#", "");
   }
 
   getCssVariable(name: string): string {

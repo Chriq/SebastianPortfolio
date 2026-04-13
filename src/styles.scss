@@ -2,52 +2,25 @@
 @use 'SASS:map';
 
 @include mat.core();
-
-// $portfolio-theme: mat.define-theme((color: (theme-type: dark,
-//         primary: mat.$azure-palette,
-//         tertiary: mat.$blue-palette,
-//         use-system-variables: true),
-//       density: (scale: 0,
-//       )));
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-// :root {
-//   @include mat.all-component-themes($portfolio-theme);
-// }
+// @include mat.all-component-themes()
 
 :root {
-  /* Backgrounds */
-  --bg-primary: #071319;
-  /* Midnight Blue */
-  --bg-secondary: #030d17;
-  /* Deep Aubergine */
-  --bg-elevated: #070f27;
-  /* Night Fog */
+  --bg-primary: #0B0B0C;
+  --bg-secondary: #16171A;
+  --bg-elevated: #2A2C31;
 
-  /* Text */
-  --text-primary: #E8E3D8;
-  /* Warm Bone */
-  --text-secondary: #d2cbe4;
-  /* Muted Ash */
+  --text-primary: #F5F5F5;
+  --text-secondary: #A1A1AA;
   --text-inverse: #0E1320;
 
-
-  /* Accent */
-  --accent: #C6B27C;
-  /* Desaturated Brass */
+  --accent: #D6B25E;
   --accent-muted: rgba(198, 178, 124, 0.4);
 
-  /* Borders */
   --border-subtle: rgba(232, 227, 216, 0.08);
   --border-strong: rgba(232, 227, 216, 0.16);
 
-  /* Typography */
-  --font-heading: 'Libre Baskerville', serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  --font-family: 'Oswald', sans-serif;
 
-  /* Motion */
   --transition-fast: 120ms ease;
   --transition-medium: 240ms ease;
 
@@ -59,17 +32,17 @@
 html,
 body {
   height: 100%;
+  --mat-menu-container-color: var(--bg-secondary);
 }
 
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: var(--font-body);
+  font-family: var(--font-family);
 
   background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
 
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
   height: fit-content;
 }
 
@@ -80,5 +53,74 @@ body {
 a {
   color: var(--text-secondary);
   text-decoration: none;
-  transition: color var(--sc-transition-fast);
+  transition: color var(--transition-fast);
+}
+
+h1 {
+  font-size: 64px;
+}
+
+.mat-mdc-menu-item {
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.mat-mdc-menu-item:hover {
+  background-color: var(--bg-elevated) !important;
+  color: var(--accent);
+}
+
+button.form-button {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--border-strong);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition:
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  font-size: large;
+}
+
+button.form-button:not(:disabled):hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+button.form-button:disabled {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  cursor: default;
+}
+
+.link {
+  transition:
+    color var(--transition-fast);
+}
+
+button.link:hover {
+  color: var(--accent);
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px var(--bg-primary) inset !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
