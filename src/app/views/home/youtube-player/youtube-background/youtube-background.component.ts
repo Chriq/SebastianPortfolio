@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input } from '@angular/core';
+import { YoutubeService } from '../youtube-service/youtube.service';
 
 declare var YT: any;
 
@@ -14,14 +15,12 @@ export class YoutubeBackgroundComponent {
 
   private player: any;
 
-  constructor(private elementRef: ElementRef) { }
+  constructor(private elementRef: ElementRef, private ytService: YoutubeService) { }
 
   ngOnInit(): void {
-    if (window['YT']) {
+    this.ytService.loadYouTubeAPI().then(() => {
       this.createPlayer();
-    } else {
-      window['onYouTubeIframeAPIReady'] = () => this.createPlayer();
-    }
+    });
   }
 
   createPlayer(): void {

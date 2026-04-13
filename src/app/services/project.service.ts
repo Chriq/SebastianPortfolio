@@ -7,7 +7,7 @@ import { Observable, of, BehaviorSubject, map } from 'rxjs';
 })
 export class ProjectService {
 
-  constructor() {}
+  constructor() { }
 
   projectMap: BehaviorSubject<Map<string, Project>> = new BehaviorSubject(null);
 
@@ -18,6 +18,7 @@ export class ProjectService {
   }
 
   getProjectById(id: string): Observable<Project> {
+    this.loadAllProjects();
     return this.projectMap.pipe(
       map((response) => {
         return response.get(id);
@@ -27,7 +28,7 @@ export class ProjectService {
 
   private toMap(arr: Project[]): Map<string, Project> {
     let map: Map<string, Project> = new Map();
-    for(let p of arr) {
+    for (let p of arr) {
       map.set(p.id, p);
     }
 
