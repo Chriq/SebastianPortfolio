@@ -1,19 +1,16 @@
 <div class="home-container">
-    <div class="video-wrapper">
-        <iframe class="bg-video"
-            src="https://www.youtube.com/embed/1Vtx_szgdMI?autoplay=1&mute=1&controls=0&loop=1&showinfo=0&playlist=1Vtx_szgdMI&"
-            frameBorder="0" allowFullScreen allow="autoplay"></iframe>
-    </div>
-
+    <youtube-background #yt videoId="1Vtx_szgdMI"></youtube-background>
 
     <div class="name-container">
-        <div class="name-box" style="text-align: center">
-            <h1>Sebastian Segura</h1>
-            <h2 style="width: 390px;;">Writer | Director | Producer Cinematographer | Editor</h2>
+        <div class="name-scroll" [style.--scroll-height]="height">
+            <div #name class="name-items">
+                <h1>Sebastian Segura</h1>
+                <h2 style="width: 390px;">Writer | Director | Producer Cinematographer | Editor</h2>
+            </div>
         </div>
     </div>
 
-    <div class="home-video">
+    <div class="reel">
         <iframe [src]="reelUrl | safeUrl" frameborder="0" allowfullscreen>
         </iframe>
     </div>

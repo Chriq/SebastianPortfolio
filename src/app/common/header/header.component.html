@@ -1,8 +1,31 @@
 <header class="header">
-  <div class="title" (click)="navigateTo('home');">Sebastian Segura</div>
+  <button mat-button class="link">
+    <h1 class="title" (click)="navigateTo('home');">Sebastian Segura</h1>
+  </button>
 
   <nav class="nav-links">
-    <a *ngFor="let item of menuOptions" (click)='navigateTo(item)'>{{item}}</a>
+    <ng-container *ngFor="let item of menuOptions">
+      <button mat-button class="link" *ngIf="item !== 'Portfolio'" (click)='navigateTo(item)'>
+        <h2>{{item}}</h2>
+      </button>
+      <ng-container *ngIf="item === 'Portfolio'">
+        <div class="nav-item" routerLinkActive="active"
+          (mouseenter)="targetMenuTrigger = createPlanmenuTrigger; mouseEnter(createPlanmenuTrigger)"
+          (mouseleave)="mouseLeave(createPlanmenuTrigger)">
+          <button mat-button class="link" #createPlanmenuTrigger="matMenuTrigger" [matMenuTriggerFor]="createPlan"
+            (click)='navigateTo(item)'>
+            <h2>Portfolio</h2>
+          </button>
+          <mat-menu #createPlan="matMenu" [hasBackdrop]="false" [overlapTrigger]="false">
+            <div (mouseenter)="mouseEnter(targetMenuTrigger)" (mouseleave)="mouseLeave(targetMenuTrigger)">
+              <button *ngFor="let item of portfolioSubMenu" mat-menu-item (click)="navigateTo('Portfolio', item)">
+                <h3>{{item}}</h3>
+              </button>
+            </div>
+          </mat-menu>
+        </div>
+      </ng-container>
+    </ng-container>
   </nav>
 
   <div class="hamburger" (click)="toggleMenu()">

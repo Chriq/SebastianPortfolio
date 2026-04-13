@@ -1,6 +1,6 @@
 .contact-form {
     max-width: 600px;
-    margin: 0px auto;
+    margin: -85px auto;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
@@ -25,27 +25,14 @@ label {
     margin-bottom: 5px;
 }
 
-input, textarea {
+input,
+textarea {
     padding: 10px;
     font-size: 1rem;
-}
-
-button {
-    padding: 10px;
-    font-size: 1.1rem;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
 }
 
 span {
     font-size: large;
     text-align: center;
     margin: 0 16px 16px 16px;
- }
+}

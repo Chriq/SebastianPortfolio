@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding-bottom: 32px;
+  padding: 0 10% 5%;
+  margin-top: -126px;
 }
 
 .project-card {
@@ -19,23 +20,19 @@
   direction: rtl;
 }
 
-.project-card.reverse .project-info {
-  direction: ltr;
-}
-
 .project-image img {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   transition: filter 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 }
 
 .project-image img:hover {
   filter: brightness(1.2);
-  transform: scale(1.01); /* optional slight zoom */
+  transform: scale(1.01);
 }
 
 
@@ -84,13 +81,12 @@ mat-divider {
 
 
 :root {
-  @include mat.tabs-overrides((
-    active-focus-indicator-color: orange,
-    active-label-text-color: red,
-    divider-color: red
-  ));
+  @include mat.tabs-overrides((active-focus-indicator-color: orange,
+      active-label-text-color: red,
+      divider-color: red));
 }
 
 .mdc-tab__text-label {
-  color: red;;
+  color: red;
+  ;
 }
