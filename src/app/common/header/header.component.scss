@@ -9,7 +9,7 @@
   background-color: var(--bg-secondary);
   background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
 
-  height: 120px;
+  height: clamp(1.5rem, 4vw + 4rem, 8rem);
   margin-bottom: 120px;
   z-index: 100;
 }
@@ -76,12 +76,13 @@ mat-menu {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .nav-links {
     display: none;
   }
 
   .hamburger {
     display: block;
+    font-size: clamp(1.5rem, 4vw + 1rem, 4rem);
   }
 }
