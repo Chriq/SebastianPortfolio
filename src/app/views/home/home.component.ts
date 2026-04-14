@@ -18,7 +18,8 @@ export class HomeComponent implements AfterViewInit {
 
   reelUrl = "https://www.youtube.com/embed/J4taJk9VpPE";
 
-  height = "975px";
+  vHeight = "975px";
+  nHeight = "450px";
 
   ngAfterViewInit() {
     this.calculateScrollHeight();
@@ -34,15 +35,15 @@ export class HomeComponent implements AfterViewInit {
 
     const videoHeight = this.ytElement["elementRef"].nativeElement.firstChild.clientHeight;
     if (videoHeight && videoHeight > 0) {
-      calcHeight = videoHeight;
+      this.vHeight = videoHeight + "px";
     }
 
     const nameHeight = this.nmElement.nativeElement.offsetHeight;
     if (nameHeight && nameHeight > 0) {
-      calcHeight += nameHeight;
+      this.nHeight = nameHeight + "px";
     }
 
-    this.height = calcHeight + "px";
+    // this.vHeight = calcHeight + "px";
   }
 }
 

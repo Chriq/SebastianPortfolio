@@ -57,8 +57,13 @@ a {
 }
 
 h1 {
-  font-size: 64px;
+  font-size: clamp(1.5rem, 4vw + 1rem, 4rem);
 }
+
+h2 {
+  font-size: clamp(1rem, 1vw + 1rem, 2rem);
+}
+
 
 .mat-mdc-menu-item {
   transition:

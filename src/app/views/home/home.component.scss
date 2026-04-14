@@ -8,7 +8,7 @@
   width: 65%;
   aspect-ratio: 16 / 9;
   justify-self: center;
-  margin-top: 50px;
+  margin-top: 2rem;
 }
 
 .reel iframe {
@@ -37,13 +37,19 @@
   z-index: 1;
   place-self: anchor-center;
   // add half reel margin-top
-  height: calc(var(--scroll-height) + 25px);
+  height: calc(var(--v-height) + var(--n-height) + 25px);
 }
 
 .name-items {
   text-align: center;
   position: sticky;
-  top: 450px;
+  top: calc(var(--v-height) / 2);
   place-items: center;
   font-size: large;
+}
+
+@media (max-width: 750px) {
+  .name-scroll {
+    height: calc(var(--v-height));
+  }
 }
