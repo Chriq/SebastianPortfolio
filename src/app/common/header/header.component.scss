@@ -83,6 +83,6 @@ mat-menu {
 
   .hamburger {
     display: block;
-    font-size: clamp(1.5rem, 4vw + 1rem, 4rem);
+    font-size: var(--header-size);
   }
 }

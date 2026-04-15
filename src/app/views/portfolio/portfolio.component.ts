@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
-import { Project } from '../../interfaces/media';
+import { Project, VimeoResponse } from '../../interfaces/media';
 import { ProjectService } from '../../services/project.service';
 import { Router } from '@angular/router';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTabsModule } from '@angular/material/tabs';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-portfolio',
@@ -54,11 +55,7 @@ export class PortfolioComponent implements OnInit, OnChanges {
     this.router.navigate(['portfolio/', route]);
   }
 
-  getCoverImage(p: Project): string {
-    // TODO: called 2x
-    //console.log(p.id);
-    return "https://i.ytimg.com/vi/" + p.ytVideoId + "/maxresdefault.jpg";
-  }
+
 
   updateDisplayedProjects(selectedRoles: string[]) {
     let project = this.allProjects;
@@ -75,7 +72,12 @@ export class PortfolioComponent implements OnInit, OnChanges {
       let t1 = new Date(track1.releaseDate).getTime();
       let t2 = new Date(track2.releaseDate).getTime();
 
-      return t2 - t1;
+      if(t1 !== t2) {
+        return t2 - t1;
+      } else {
+        return track1.title.localeCompare(track2.title);
+      }
+      
     });
   }
 }

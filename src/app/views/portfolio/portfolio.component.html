@@ -1,18 +1,27 @@
 <div *ngIf="displayedProjects" class="portfolio-container">
-  <div class="project-card" *ngFor="let project of displayedProjects; let i = index; let last = last"
-    [ngClass]="{ 'reverse': i % 2 !== 0 }">
-    <div class="project-image">
-      <img [src]="getCoverImage(project)" alt="{{ project.title }}" (click)="navigateTo(project.id);" />
-    </div>
-    <div class="project-info" [ngClass]="{ 'reverse': i % 2 !== 0 }" (click)="navigateTo(project.id);">
-      <h2>{{ project.title }}</h2>
-      <span class="info-small">{{ project.createdBy }} - {{ project.duration }}</span>
-      <span class="info-small">{{ project.genre }}</span>
+  <ng-container *ngFor="let project of displayedProjects; let i = index; let last = last">
+    <div class="project-card" [ngClass]="{ 'reverse': i % 2 !== 0 }">
+      <div class="project-image">
+        <img *ngIf="project.videoId; else comingSoon" [src]="project.thumbnailUrl" alt="{{ project.title }}"
+          (click)="navigateTo(project.id);" />
+      </div>
 
-      <!-- <span class="info-regular">{{ project.description }}</span> -->
-      <span class="info-regular">{{ project.credits }}</span>
-      <span class="info-regular">{{ project.awards }}</span>
+      <div class="project-info" [ngClass]="{ 'reverse': i % 2 !== 0 }" (click)="navigateTo(project.id);">
+        <h1><bdi>{{ project.title }}</bdi></h1>
+        <span class="info-small">
+          <span *ngIf="project.createdBy">{{ project.createdBy }}&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;</span>
+          <span>{{ project.releaseDate | date:'yyyy' }}</span>
+        </span>
+        <span class="info-small"><bdi>{{ project.genre?.join(',&nbsp;')}}</bdi></span>
+      </div>
     </div>
+    
     <mat-divider *ngIf="!last"></mat-divider>
-  </div>
+  </ng-container>
 </div>
+
+<ng-template #comingSoon>
+  <div class="coming-soon">
+    <bdi>Coming Soon!</bdi>
+  </div>
+</ng-template>

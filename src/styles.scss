@@ -24,6 +24,9 @@
   --transition-fast: 120ms ease;
   --transition-medium: 240ms ease;
 
+  --header-size: clamp(1.5rem, 4vw + 1rem, 4rem);
+  --sub-header-size: clamp(1rem, 1vw + 1rem, 2rem);
+
   @include mat.select-overrides((panel-background-color: var(--bg-primary),
       enabled-trigger-text-color: var(--text-primary),
     ));
@@ -57,11 +60,11 @@ a {
 }
 
 h1 {
-  font-size: clamp(1.5rem, 4vw + 1rem, 4rem);
+  font-size: var(--header-size);
 }
 
 h2 {
-  font-size: clamp(1rem, 1vw + 1rem, 2rem);
+  font-size: var(--sub-header-size);
 }
 
 
