@@ -18,8 +18,7 @@
 }
 
 .project-text h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.3em;
+  margin: 16px 0 16px 0;
 }
 
 .short-description {
@@ -49,14 +48,16 @@
 }
 
 .info-small {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  font-size: small;
-  color: #aaaaaa;
+  font-size: xx-large;
+  color: var(--text-secondary);
   margin-bottom: 8px;
 }
 
+.info-small div {
+  margin: 8px 0 8px 0;
+}
+
 .info-regular {
+  font-size: x-large;
   margin-bottom: 4px;
 }

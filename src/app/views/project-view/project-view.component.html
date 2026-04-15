@@ -1,5 +1,5 @@
 <div class="project-container" *ngIf="project">
-  <div class="project-video">
+  <div *ngIf="embedUrl" class="project-video">
     <iframe [src]="embedUrl | safeUrl" frameborder="0" allowfullscreen>
     </iframe>
   </div>
@@ -7,22 +7,27 @@
   <div class="project-header">
     <div class="project-text">
       <h1>{{ project.title }}</h1>
+
       <div class="info-small">
-        <span>{{ project.createdBy }}</span>
-        <span>*</span>
-        <span>{{ project.duration }}</span>
-        <span>*</span>
-        <span>{{ project.genre }}</span>
+        <div>
+          <span>{{ project.createdBy }}</span>
+          <span *ngIf="project.createdBy">&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;</span>
+          <span>{{ project.releaseDate | date:'yyyy' }}</span>
+        </div>
+        <div><span>{{ project.genre?.join(', ')}}</span></div>
       </div>
 
-      <h2>Description</h2>
-      <span class="info-regular">{{ project.description }}</span>
+      <p class="info-regular">{{ project.description }}</p>
 
-      <h2>Awards</h2>
-      <span class="info-regular">{{ project.awards }}</span>
+      <ng-container *ngIf="project.awards">
+        <h2>Awards</h2>
+        <span class="info-regular">{{ project.awards }}</span>
+      </ng-container>
 
-      <h2>Credits</h2>
-      <span class="info-regular" *ngFor="let c of project.credits">{{ c }}</span>
+      <ng-container *ngIf="project.credits">
+        <h2>Credits</h2>
+        <span class="info-regular" *ngFor="let c of project.credits">{{ c }}</span>
+      </ng-container>
     </div>
   </div>
 </div>

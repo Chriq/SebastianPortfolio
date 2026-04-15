@@ -14,23 +14,26 @@
   align-items: center;
   gap: 2rem;
   margin-top: 16px;
+  transition: 
+    filter var(--transition-medium), 
+    transform var(--transition-medium);
 }
 
 .project-card.reverse {
   direction: rtl;
 }
 
-.project-image img {
+.project-image img,
+.project-image div {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  transition: filter 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 }
 
-.project-image img:hover {
+.project-card:hover {
   filter: brightness(1.2);
   transform: scale(1.01);
 }
@@ -43,8 +46,8 @@
   cursor: pointer;
 }
 
-.project-info h2 {
-  margin: 0 0 0.5rem;
+.project-info h1 {
+  margin: 0 0 1.2rem;
 }
 
 .project-info p {
@@ -53,7 +56,7 @@
 }
 
 mat-divider {
-  width: 200%;
+  width: 100%;
 }
 
 @media (max-width: 750px) {
@@ -74,13 +77,9 @@ mat-divider {
 
 
 .info-small {
-  font-size: small;
-  color: #aaaaaa;
+  font-size: x-large;
+  color: var(--text-secondary);
   margin-bottom: 8px;
-}
-
-.info-regular {
-  margin-bottom: 4px;
 }
 
 
@@ -94,4 +93,11 @@ mat-divider {
 .mdc-tab__text-label {
   color: red;
   ;
+}
+
+.coming-soon {
+  background-color: var(--bg-elevated);
+  align-content: center;
+  text-align: center;
+  font-size: var(--header-size);
 }

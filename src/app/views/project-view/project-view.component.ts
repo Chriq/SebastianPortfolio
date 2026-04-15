@@ -13,18 +13,24 @@ import { CommonModule } from '@angular/common';
 })
 export class ProjectViewComponent implements OnInit {
   constructor(
-      private projectService: ProjectService,
-      private router: Router
-    ) {}
+    private projectService: ProjectService,
+    private router: Router
+  ) { }
 
-    project: Project;
-    embedUrl: string;
+  project: Project;
+  embedUrl: string;
 
-    ngOnInit() {
-      let id = this.router.url.replace("/portfolio/", "");
-      this.projectService.getProjectById(id).subscribe((response) => {
-        this.project = response;
-        this.embedUrl = "https://www.youtube.com/embed/" + response.ytVideoId;
-      });
-    }
+  ngOnInit() {
+    let id = this.router.url.replace("/portfolio/", "");
+    this.projectService.getProjectById(id).subscribe((response) => {
+      this.project = response;
+      if(response.videoId) {
+        if(response.videoHost === 'YOUTUBE') {
+          this.embedUrl = "https://www.youtube.com/embed/" + response.videoId;
+        } else {
+          this.embedUrl = "https://player.vimeo.com/video/" + response.videoId;
+        }
+      }
+    });
+  }
 }
