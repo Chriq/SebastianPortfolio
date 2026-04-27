@@ -47,7 +47,7 @@
 }
 
 .project-info h1 {
-  margin: 0 0 1.2rem;
+  margin: 0 0 0;
 }
 
 .project-info p {
@@ -78,6 +78,12 @@ mat-divider {
 
 .info-small {
   font-size: x-large;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.info-med {
+  font-size: xx-large;
   color: var(--text-secondary);
   margin-bottom: 8px;
 }

@@ -8,6 +8,7 @@
         "genre": [
             "Thriller"
         ],
+        "synopsis": "A girl goes on a run when she gets a dreaded text message from her boyfriend.",
         "description": "Adrenaline Film Project 2022",
         "credits": [
             "Sophia Jordan",
@@ -34,6 +35,7 @@
         "genre": [
             "Drama"
         ],
+        "synopsis": "An A.I. and its creator have a discussion on life.",
         "videoHost": "YOUTUBE",
         "videoId": "uqmrlA-TZos",
         "roles": [
@@ -67,7 +69,7 @@
             "Drama",
             "Crime"
         ],
-        "description": "",
+        "synopsis": "Two hitmen have a philosophical conversation after a job, but are met by an unexpected surprise.",
         "videoHost": "YOUTUBE",
         "videoId": "",
         "roles": [
@@ -86,6 +88,7 @@
         "genre": [
             "Comedy"
         ],
+        "synopsis": "George and Kevin want to “kidnap” their friend as a prank and throw them a surprise birthday party. But they kidnap the wrong person.",
         "videoHost": "YOUTUBE",
         "videoId": "",
         "roles": [
@@ -104,6 +107,7 @@
             "Thriller",
             "Drama"
         ],
+        "synopsis": "A secret society hosts a party in order to recruit new members but only one can join.",
         "videoHost": "VIMEO",
         "videoId": "822764644",
         "roles": [
@@ -119,6 +123,7 @@
         "genre": [
             "Comedy"
         ],
+        "synopsis": "Charlie and James's friendship is put to the test when Charlie gets a new girlfriend.",
         "videoHost": "YOUTUBE",
         "videoId": "1YNy6QfSvhg",
         "roles": [
@@ -134,6 +139,7 @@
         "genre": [
             "Horror"
         ],
+        "synopsis": "Three campers share ghost stories, each one more disturbing than the last.",
         "videoHost": "YOUTUBE",
         "videoId": "cL89nKCaVYg",
         "roles": [
@@ -154,6 +160,7 @@
         "genre": [
             "Comedy"
         ],
+        "synopsis": "A group of friends play poker and order pizza. When the pizza arrives, the delivery driver asks to join them.",
         "videoHost": "YOUTUBE",
         "videoId": "724w0oflJwQ",
         "roles": [
@@ -171,6 +178,7 @@
         "genre": [
             "Experimental"
         ],
+        "synopsis": "An experimental film using archival footage that reflects on unfinished projects.",
         "videoHost": "YOUTUBE",
         "videoId": "x7UtTc7BD-Y",
         "roles": [
@@ -189,6 +197,8 @@
             "Comedy",
             "Adventure"
         ],
+        "synopsis": "When a girl tries to break up with her boyfriend, she discovers her boyfriend is already dead.",
+        "description": "A film by Sophia Jordan, Olivia Taylor, and myself this film was the first of our Junk Food series. Shot on BMPCC 4K, we made this film in the span of a weekend. Largely shot guerilla style, we traveled to several locations across the Charlottesville area in the span of one day which largely informed how the film was shot. We primarily used wides and limited coverage, which meant the characters took center stage. What results is a film where one can feel a part of the action because of the simplicity of the shoot.",
         "videoHost": "YOUTUBE",
         "videoId": "Jr9-Ga6qqrQ",
         "roles": [
@@ -203,11 +213,12 @@
         "title": "Where Do They All Go",
         "createdBy": "",
         "releaseDate": "01-01-2021",
-        "duration": "",
         "genre": [
             "Experimental",
             "Documentary"
         ],
+        "synopsis": "An experimental documentary about the changing natural world caused by housing developments.",
+        "description": "The idea for this experimental film came from me returning home from college and seeing the town that I called home change in front of me. Suddenly, new housing developments, apartment complexes, and construction sites took over what once felt like a small yet somewhat vibrant town. I didn’t have any plan on how the film should be made, all I knew was that I wanted to capture the contrasting images of natural sites versus the growing development of my own town. This also meant that the editing process was largely natural, following a semi stream of consciousness editing method. It was important to me that the audience was able to draw the story from images and images alone. This was also the first time I mixed different formats together as some of the footage was filmed using black and white film on Bolex cameras while the majority of the film was shot on BMPCC 4K, which would be a technique I would use later.",
         "videoHost": "YOUTUBE",
         "videoId": "9OLnc0HURv0",
         "roles": [
@@ -222,10 +233,11 @@
         "title": "Out of the Frying Pan",
         "createdBy": "",
         "releaseDate": "01-01-2021",
-        "duration": "",
         "genre": [
             "Thriller"
         ],
+        "synopsis": "A prisoner breaks free from their shackles.",
+        "description": "Out of the Frying Pan is my first narrative film. Shot on BMPCC 4k, it was the first time I really directed actors. The script was simple with allusions to a grander world. But I wanted the focus to be primarily on the prisoner in the basement.",
         "videoHost": "YOUTUBE",
         "videoId": "SwwsUMNFhFc",
         "roles": [
@@ -241,10 +253,11 @@
         "title": "Haiku",
         "createdBy": "",
         "releaseDate": "01-01-2021",
-        "duration": "",
         "genre": [
             "Experimental"
         ],
+        "synopsis": "A visual representation of a haiku.",
+        "description":"A haiku is made of three lines following a 5-7-5 pattern: 5 syllables in the first line, 7 in the second, 5 in the third. This film is a visual representation of a haiku. Made entirely of three distinct shots, each one not relating to the other aside from the actor. If you wish to see the written haiku that accompanies this film, turn on the captions on YouTube. Featuring artist Alyce Yang, this film was meant to explore the use of color film as this was the first time I used Kodak color film.",
         "videoHost": "YOUTUBE",
         "videoId": "-Utv4BNBNBk",
         "roles": [
@@ -260,12 +273,12 @@
         "title": "Insomniac",
         "createdBy": "",
         "releaseDate": "01-01-2021",
-        "duration": "",
         "genre": [
             "Silent",
             "Experimental"
         ],
-        "description": "Made on 16mm color negative film with a Bolex camera, this experimental film is meant to create the anxious feeling of not being able to go to sleep.",
+        "synopsis": "A woman struggles to go to sleep.",
+        "description": "Made on 16mm color negative film with a Bolex camera, this experimental film is meant to create the anxious feeling of not being able to go to sleep. Due to the limited amount of film that was available, the short relies heavily on it being a montage with repeating images that are slightly altered to create repetition without it coming across as the same thing. This was also the first time I really began to do sound design for my films, foleying many parts of the film.",
         "videoHost": "YOUTUBE",
         "videoId": "Ly1s-D3pwT0",
         "roles": [
@@ -280,13 +293,13 @@
         "id": "runner-and-jumper",
         "title": "The Runner and the Jumper",
         "releaseDate": "01-01-2020",
-        "duration": "",
         "genre": [
             "Silent",
             "Thriller",
             "Experimental"
         ],
-        "description": "Made on 16mm black and white reversal film with a Bolex camera, this is the first film I ever made...",
+        "synopsis": "One person seeks to end their life, the other races to stop her.",
+        "description": "Made on 16mm black and white reversal film with a Bolex camera, this is the first film I ever made. Starring the lovely Karen Zipor, it tells of a story of two people: a woman who wants to jump off the side of a parking structure, and a person who is running to find them. The film was meant to be an exercise of telling a cohesive story within a short runtime, only one minute and eleven seconds.",
         "videoHost": "YOUTUBE",
         "videoId": "qGVOlwsmPJw",
         "roles": [
