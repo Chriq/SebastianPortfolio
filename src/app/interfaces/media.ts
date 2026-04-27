@@ -5,6 +5,7 @@ export interface Project {
     createdBy: string,
     duration: string,
     genre: string[],
+    synopsis: string,
     description?: string,
     credits?: string[],
     awards?: string[],
